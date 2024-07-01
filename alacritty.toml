@@ -4,10 +4,11 @@ import = [
 
 [window]
 decorations = "None"
-startup_mode = "Fullscreen"
+startup_mode = "Maximized"
 
 [env]
 TERM = "xterm-256color"
+WINIT_X11_SCALE_FACTOR = "1.0"
 
 [font]
 normal = { family = "JetBrainsMono NF", style = "Regular" }
@@ -18,3 +19,10 @@ size = 10.0
 
 [scrolling]
 history = 100000
+
+[keyboard]
+bindings = [
+{key = "Escape", mods = "Alt", action = "ToggleViMode"},
+{key = "i", mode = "Vi|~Search", action = "ToggleViMode"},
+{key = "y", mode = "Vi", action = "Copy"},
+]
